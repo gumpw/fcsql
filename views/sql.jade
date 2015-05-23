@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  div(ng-controller="sqlTest")
+    input(ng-model="sql.tester")
+    div {{sql.tester}}
+  div(ng-controller="sqlController")
+    input(ng-model="sql.seqName")
+    pre(class='brush: sql')= sqlContent
+
+block script
+  script(src='/js/sqlController.js')
