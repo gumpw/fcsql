@@ -1,12 +1,13 @@
 extends layout
 
 block content
-  div(ng-controller="sqlTest")
-    input(ng-model="sql.tester")
-    div {{sql.tester}}
-  div(ng-controller="sqlController")
-    input(ng-model="sql.seqName")
+  form(way-data="sql",way-persistent="true")
+    input(type="text",name="sqlName")
     pre(class='brush: sql')= sqlContent
 
 block script
-  script(src='/js/sqlController.js')
+  //script(src='/js/sqlController.js')
+  //script(src='/js/shCore.js')
+  //script(src='/js/shBrushSql.js')
+  //script SyntaxHighlighter.all();
+  //script(src='/js/initBind.js')
